@@ -1,33 +1,15 @@
-import random
-
-def poker():
-    cartas=['Ah','Kh','Qh','Jh','Th','9h','8h','7h','6h','5h','4h','3h','2h',
-            'As','Ks','Qs','Js','Ts','9s','8s','7s','6s','5s','4s','3s','2s',
-            'Ac','Kc','Qc','Jc','Tc','9c','8c','7c','6c','5c','4c','3c','2c',
-            'Ad','Kd','Qd','Jd','Td','9d','8d','7d','6d','5d','4d','3d','2d']
-
-    carta1=cartas[random.randint(0,len(cartas)-1)]
-    cartas.remove(carta1)
-    carta2=cartas[random.randint(0,len(cartas)-1)]
-    cartas.remove(carta2)
-
-    mano = carta1+carta2
-    print(f'Tu mano es: {mano}')
-    
-    flop1=cartas[random.randint(0,len(cartas)-1)]
-    cartas.remove(flop1)
-    flop2=cartas[random.randint(0,len(cartas)-1)]
-    cartas.remove(flop2)
-    flop3=cartas[random.randint(0,len(cartas)-1)]
-    cartas.remove(flop3)
-
-    flop = flop1+flop2+flop3
-    print(f'El flop es: {flop}')
-
-    turn = cartas[random.randint(0,len(cartas)-1)]
-    cartas.remove(turn)
-    print(f'El turn es: {turn}')
-
-    river = cartas[random.randint(0,len(cartas)-1)]
-    cartas.remove(river)
-    print(f'El river es: {river}')
+def cashGames(pos):
+        hands= [['AA','AKs','AQs','AJs','ATs','A9s','A8s','A7s','A6s','A5s','A4s','A3s','A2s'],
+                ['AKo','KK','KQs','KJs','KTs','K9s','K8s','K7s','K6s','K5s','K4s','K3s','K2s'],
+                ['AQo','KQo','QQ','QJs','QTs','Q9s','Q8s','Q7s','Q6s','Q5s','Q4s','Q3s','Q2s'],
+                ['AJo','KJo','QJo','JJ','JTs','J9s','J8s','J7s','J6s','J5s','J4s','J3s','J2s'],
+                ['ATo','KTo','QTo','JTs','TT','T9s','T8s','T7s','T6s','T5s','T4s','T3s','T2s'],
+                ['A9o','K9o','Q9o','J9o','T9o','99','98s','97s','96s','95s','94s','93s','92s'],
+                ['A8o','K8o','Q8o','J8o','T8o','98o','88','87s','86s','85s','84s','83s','82s'],
+                ['A7o','K7o','Q7o','J7o','T7o','97o','87o','77','76s','75s','74s','73s','72s'],
+                ['A6o','K6o','Q6o','J6o','T6o','96o','86o','76o','66','65s','64s','63s','62s'],
+                ['A5o','K5o','Q5o','J5o','T5o','95o','85o','75o','65o','55','54s','53s','52s'],
+                ['A4o','K4o','Q4o','J4o','T4o','94o','84o','74o','64o','54o','44','43s','42s'],
+                ['A3o','K3o','Q3o','J3o','T3o','93o','83o','73o','63o','53o','43o','33','32s'],
+                ['A2o','k2o','Q2o','J2o','T2o','92o','82o','72o','62o','52o','42o','32o','22']]
+        if pos=='utg':

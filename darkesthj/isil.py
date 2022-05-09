@@ -4,3 +4,6 @@ def isil(ep1,ep2,parcial,ep3,ep4,final):
         notaFinal = final*0.3
         promedioFinal = notaEP+notaParcial+notaFinal
         print(f'Su nota final es: {promedioFinal}')
+
+
+isil(10,18,20,20,15,20)
